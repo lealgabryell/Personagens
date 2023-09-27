@@ -1,8 +1,11 @@
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Personagem> personagens = new ArrayList<Personagem>();
+        List<Personagem> personagens = new ArrayList<Personagem>();
         // Adicionando personagens a lista
         Arqueiro arqueiro = new Arqueiro();
         arqueiro.nome = "Elyndor Bow&Arrow";
@@ -50,12 +53,21 @@ public class Main {
         mago.descreverPersonagem();
         System.out.println("\n");
 
-        for (Personagem i : personagens) {
-            System.out.println(i);
-        }
+        // for (Personagem i : personagens) {
+        // System.out.println(i);
+        // }
 
-        System.out.println("\nO " + arqueiro.tipo + " " + arqueiro.nome + " atacou " + guerreiro.tipo + " "
+        System.out.println("O " + arqueiro.tipo + " " + arqueiro.nome + " atacou " + guerreiro.tipo + " "
                 + guerreiro.nome + " e causou " + arqueiro.causarDano() + " de dano! A vida do " + guerreiro.tipo
                 + " agora esta com " + (guerreiro.vida - arqueiro.causarDano()) + " de HP");
+
+        List<Personagem> ordemAlfabetica = personagens.stream()
+                .sorted(Comparator.comparing(personagem -> personagem.nome))
+                .collect(Collectors.toList());
+
+        System.out.println("\nPersonagens em ordem alfabetica: \n");
+        for (Personagem i : ordemAlfabetica) {
+            System.out.println(i);
+        }
     }
 }

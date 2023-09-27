@@ -16,8 +16,8 @@ public class Arqueiro extends Personagem {
     @Override
     public void descreverPersonagem() {
         System.out.println(
-                nome + "e do tipo " + tipo + " e possui um arco e flecha de " + arcoEflecha + " com alcance de "
-                        + alcance + " metros " + " e esta no nivel " + nivel + ". Esse personagem tem " + forca
+                nome + " do tipo " + tipo + " e possui um arco e flecha de " + arcoEflecha + " com alcance de "
+                        + alcance + " metros e esta no nivel " + nivel + ". Esse personagem tem " + forca
                         + " de forca e possui " + inteligencia
                         + " de inteligencia e " + agilidade + " de agilidade. Tem o total de " + vida
                         + " de HP. Seu atributo de defesa e de " + defesa+".");
