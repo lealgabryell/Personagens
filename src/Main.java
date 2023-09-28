@@ -53,15 +53,11 @@ public class Main {
         mago.descreverPersonagem();
         System.out.println("\n");
 
-        // for (Personagem i : personagens) {
-        // System.out.println(i);
-        // }
-
         System.out.println("O " + arqueiro.tipo + " " + arqueiro.nome + " atacou " + guerreiro.tipo + " "
                 + guerreiro.nome + " e causou " + arqueiro.causarDano() + " de dano! A vida do " + guerreiro.tipo
                 + " agora esta com " + (guerreiro.vida - arqueiro.causarDano()) + " de HP");
 
-        List<Personagem> ordemAlfabetica = personagens.stream()
+        List<Personagem> ordemAlfabetica = personagens.stream() //ordenar por ordem natural (alfabetica)
                 .sorted(Comparator.comparing(personagem -> personagem.nome))
                 .collect(Collectors.toList());
 

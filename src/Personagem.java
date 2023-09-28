@@ -10,18 +10,6 @@ public class Personagem {
     protected int vida;
     protected int defesa;
     protected String tipo;
-    // public ArrayList<Personagem> personagens = new ArrayList<Personagem>();
-
-    // public Personagem(String nome, int nivel, int forca, int inteligencia, int
-    // agilidade, int vida, int defesa) {
-    // this.nome = nome;
-    // this.nivel = nivel;
-    // this.forca = forca;
-    // this.inteligencia = inteligencia;
-    // this.agilidade = agilidade;
-    // this.vida = vida;
-    // this.defesa = defesa;
-    // }
 
     public int causarDano() {
         return 100;
